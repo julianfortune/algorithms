@@ -9,7 +9,7 @@ def quickselect(list: List[Int], k: Int): Option[Int] = list match {
             Some(pivot)
         } else {
             val right = unsorted.filter(_ > pivot)
-            quickselect(right, k - pivotOrdinal)
+            quickselect(right, k - pivotPosition)
         }
     }
     case _ => None
